@@ -13,7 +13,7 @@ export default function TextArea({ value, setValue, className, ...rest }: Props)
     <textarea
       value={value}
       onChange={(e) => setValue(e.target.value)}
-      className={`focus:outline-none rounded-lg leading-6 tracking-wide py-4 text-slate-500 bg-primary resize-none ${textAreaFont.className} ${className}`}
+      className={`focus:outline-none rounded-lg leading-6 tracking-wide text-slate-500 bg-primary resize-none ${textAreaFont.className} ${className}`}
       {...rest}
     />
   );

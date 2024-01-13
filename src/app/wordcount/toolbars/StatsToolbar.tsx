@@ -18,7 +18,7 @@ export default function StatsToolbar({ text }: Props) {
     <div className='flex items-center justify-between w-full'>
       <Stat title='words' value={wordCount} />
       <Stat title='characters' value={charCount} />
-      <Stat title='characters' subtitle='inc. withspace' value={charWithSpaceCount} />
+      <Stat title='chars' subtitle='withspace' value={charWithSpaceCount} />
       <Stat title='sentences' value={sentenceCount} />
       <Stat title='paragraphs' value={paragraphCount} />
       <Stat title='pages' value={pageCount} />
