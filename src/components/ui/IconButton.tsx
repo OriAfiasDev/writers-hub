@@ -3,12 +3,16 @@ interface Props {
   onClick?: () => void;
   className?: string;
   title?: string;
+  disabled?: boolean;
 }
 
-export default function IconButton({ icon, onClick, className, title }: Props) {
+export default function IconButton({ icon, onClick, className, title, disabled }: Props) {
   return (
     <span
-      className={`h-12 w-12 flex justify-center items-center bg-secondary cursor-pointer rounded-md mb-4 ${className} has-tooltip`}
+      aria-disabled={disabled}
+      className={`h-12 w-12 flex justify-center items-center bg-secondary cursor-pointer rounded-md mb-4 ${className} has-tooltip ${
+        disabled && 'pointer-events-none opacity-50'
+      }`}
       onClick={onClick}
     >
       <span>{icon}</span>
