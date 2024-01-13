@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        120: '40rem',
+      },
       colors: {
         facebook: '#3b5999',
         twitter: '#55acee',

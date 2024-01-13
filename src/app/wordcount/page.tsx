@@ -8,22 +8,27 @@ import TextArea from '@/components/ui/TextArea';
 export default function WordCounter() {
   const [text, setText] = useState('');
   return (
-    <main className='flex flex-col items-center justify-center p-24'>
-      <div className='flex flex-col items-center rounded-lg bg-primary w-10/12 h-full p-6'>
-        <StatsToolbar text={text} />
+    <main className='flex items-center justify-center h-full-screen'>
+      <div className='flex h-120'>
+        <div className='card w-2/12 h-full'>asd</div>
 
-        <hr className='divider' />
+        <div className='card w-8/12 h-full mx-4'>
+          <StatsToolbar text={text} />
 
-        <TextArea
-          placeholder='Type or paste your text here.'
-          value={text}
-          setValue={setText}
-          className='w-full h-[480px]'
-        />
+          <hr className='divider' />
 
-        <hr className='divider' />
+          <TextArea
+            placeholder='Type or paste your text here.'
+            value={text}
+            setValue={setText}
+            className='w-full h-96'
+          />
 
-        <SocialToolbar text={text} />
+          <hr className='divider' />
+
+          <SocialToolbar text={text} />
+        </div>
+        <div className='card w-2/12 h-full'>asd</div>
       </div>
     </main>
   );

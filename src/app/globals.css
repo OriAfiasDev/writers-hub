@@ -7,11 +7,15 @@
 }
 
 .bg-primary {
-  @apply bg-slate-200 dark:bg-slate-900;
+  @apply bg-slate-100 dark:bg-slate-900;
 }
 
 .text-primary {
-  @apply text-slate-900 dark:text-slate-200;
+  @apply text-slate-900 dark:text-slate-100;
+}
+
+.text-secondary {
+  @apply text-slate-500 dark:text-slate-400;
 }
 
 .divider {
@@ -20,4 +24,12 @@
 
 .row {
   @apply flex flex-row flex-wrap items-center justify-center w-full;
+}
+
+.card {
+  @apply flex flex-col items-center rounded-lg bg-primary shadow-lg p-6;
+}
+
+.h-full-screen {
+  height: calc(100dvh - 64px);
 }
