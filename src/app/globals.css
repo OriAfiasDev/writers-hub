@@ -6,6 +6,14 @@
   @apply bg-gradient-to-r from-blue-200 to-cyan-200 dark:from-blue-900 dark:to-cyan-900;
 }
 
+.bg-primary {
+  @apply bg-slate-200 dark:bg-slate-900;
+}
+
+.text-primary {
+  @apply text-slate-900 dark:text-slate-200;
+}
+
 .divider {
   @apply w-full my-2 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100;
 }
