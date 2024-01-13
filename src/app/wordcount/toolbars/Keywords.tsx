@@ -14,7 +14,7 @@ export default function Keywords({ text }: Props) {
       </div>
       <div className='divider' />
 
-      <div className='h-96 w-full overflow-y-scroll'>
+      <div className='h-96 overflow-y-scroll'>
         {loading && (
           <div className='flex justify-center items-center py-2'>
             <p className='text-sm text-secondary'>Calculating...</p>
@@ -22,7 +22,7 @@ export default function Keywords({ text }: Props) {
         )}
         {words.map(([word, count]) => (
           <div key={word} className='flex justify-between items-center py-2'>
-            <p className='text-sm text-secondary'>{word}</p>
+            <p className='text-sm text-secondary w-36 truncate hover:text-clip'>{word}</p>
             <p className='text-sm text-primary'>{count}</p>
           </div>
         ))}
