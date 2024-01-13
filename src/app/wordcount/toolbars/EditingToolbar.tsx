@@ -6,6 +6,7 @@ import { MdAutoFixHigh } from 'react-icons/md';
 import { MdOutlineSummarize } from 'react-icons/md';
 import { CiUndo } from 'react-icons/ci';
 import { IoSaveOutline } from 'react-icons/io5';
+import { FaBold } from 'react-icons/fa';
 
 import { Dispatch, SetStateAction } from 'react';
 import useEditingToolbar from './useEditingToolbar';
@@ -16,7 +17,7 @@ interface Props {
 }
 
 export function EditingToolbar({ text, setText }: Props) {
-  const { onCopy, onClear, onUndo, onSave } = useEditingToolbar(text, setText);
+  const { onCopy, onClear, onUndo, onSave, onBold } = useEditingToolbar(text, setText);
 
   return (
     <div>
@@ -27,7 +28,7 @@ export function EditingToolbar({ text, setText }: Props) {
 
       <hr className='divider' />
 
-      <IconButton disabled icon={<RiAiGenerate />} title='Repurpose' />
+      <IconButton icon={<FaBold />} title='Bold' onClick={onBold} />
       <IconButton disabled icon={<MdAutoFixHigh />} title='Fix' />
       <IconButton disabled icon={<MdOutlineSummarize />} title='Summarize' />
 

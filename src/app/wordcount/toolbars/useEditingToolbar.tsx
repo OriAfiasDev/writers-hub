@@ -1,7 +1,11 @@
+'use client';
+
+import useTextAreaContext from '@/providers/TextAreaProvider';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
 export default function useEditingToolbar(text: string, setText: Dispatch<SetStateAction<string>>) {
   const [actions, setActions] = useState<string[]>([text]);
+  const { setIsBold } = useTextAreaContext();
 
   const onCopy = () => {
     navigator.clipboard.writeText(text);
@@ -22,11 +26,15 @@ export default function useEditingToolbar(text: string, setText: Dispatch<SetSta
     localStorage.setItem('text', text);
   };
 
+  const onBold = () => {
+    setIsBold((prev) => !prev);
+  };
+
   useEffect(() => {
     if (text !== '') {
       setActions((prev) => (prev[prev.length - 1] === text ? prev : [...prev, text]));
     }
   }, [text]);
 
-  return { onCopy, onClear, onUndo, onSave } as const;
+  return { onCopy, onClear, onUndo, onSave, onBold } as const;
 }
