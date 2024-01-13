@@ -8,7 +8,7 @@ import Keywords from './toolbars/Keywords';
 import { EditingToolbar } from './toolbars/EditingToolbar';
 
 export default function WordCounter() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState(localStorage.getItem('text') || '');
   return (
     <main className='flex items-center justify-center h-full-screen'>
       <div className='flex h-120 w-8/12'>

@@ -18,11 +18,15 @@ export default function useEditingToolbar(text: string, setText: Dispatch<SetSta
     setText(lastAction);
   };
 
+  const onSave = () => {
+    localStorage.setItem('text', text);
+  };
+
   useEffect(() => {
     if (text !== '') {
       setActions((prev) => (prev[prev.length - 1] === text ? prev : [...prev, text]));
     }
   }, [text]);
 
-  return { onCopy, onClear, onUndo } as const;
+  return { onCopy, onClear, onUndo, onSave } as const;
 }
