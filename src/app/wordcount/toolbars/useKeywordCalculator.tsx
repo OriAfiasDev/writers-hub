@@ -40,5 +40,4 @@ const getTopWords = (text: string): [string, number][] =>
     }, {} as Record<string, number>)
   )
     .filter(([word]) => !!word)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 10);
+    .sort((a, b) => b[1] - a[1]);
