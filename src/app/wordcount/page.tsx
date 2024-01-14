@@ -18,11 +18,9 @@ export default function WordCounter() {
 
   return (
     <main className='flex items-center justify-center h-full-screen'>
-      <div className='flex h-120 w-8/12'>
-        <div className='card w-1/12 h-full'>
-          <EditingToolbar text={text} setText={setText} />
-        </div>
-        <div className='card w-8/12 h-full mx-4'>
+      <div className='flex flex-col lg:flex-row h-120 w-10/12 lg:w-8/12'>
+        <EditingToolbar text={text} setText={setText} />
+        <div className='card w-full lg:h-full lg:w-8/12 h-full my-4 lg:my-0 lg:mx-4 flex flex-col'>
           <StatsToolbar text={text} />
 
           <hr className='divider' />
@@ -38,9 +36,7 @@ export default function WordCounter() {
 
           <SocialToolbar text={text} />
         </div>
-        <div className='card w-3/12 h-full'>
-          <Keywords text={text} />
-        </div>
+        <Keywords text={text} />
       </div>
     </main>
   );

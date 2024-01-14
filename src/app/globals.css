@@ -42,6 +42,10 @@
   @apply h-full w-px mx-4 divider-base;
 }
 
+.divider-responsive {
+  @apply h-full w-px mx-4 lg:h-px lg:w-full lg:mx-0 lg:my-4 divider-base;
+}
+
 .row {
   @apply flex flex-row flex-wrap items-center justify-center w-full;
 }
