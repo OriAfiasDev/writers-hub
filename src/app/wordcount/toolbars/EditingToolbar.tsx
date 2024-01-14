@@ -20,7 +20,7 @@ export function EditingToolbar({ text, setText }: Props) {
   const { onCopy, onClear, onUndo, onSave, onBold } = useEditingToolbar(text, setText);
 
   return (
-    <div>
+    <div className='card w-full lg:w-1/12 h-12 lg:h-full flex flex-row lg:flex-col justify-center items-center overflow-y-hidden overflow-x-auto shrink-0'>
       <IconButton icon={<FaRegCopy />} title='Copy' onClick={onCopy} />
       <IconButton icon={<MdOutlineDelete />} title='Clear' onClick={onClear} />
       <IconButton icon={<CiUndo />} title='Undo' onClick={onUndo} />
