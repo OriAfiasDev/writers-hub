@@ -34,7 +34,7 @@ const SOCIALS = [
 
 export default function SocialToolbar({ text }: Props) {
   return (
-    <div className='flex items-center justify-between w-full my-4'>
+    <div className='flex flex-row items-center justify-between w-full my-4 overflow-x-auto overflow-y-hidden'>
       {SOCIALS.map((social) => (
         <CountWithLimit
           key={social.title}
