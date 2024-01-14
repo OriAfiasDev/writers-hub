@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import StatsToolbar from './toolbars/StatsToolbar';
 import SocialToolbar from './toolbars/SocialToolbar';
 import TextArea from '@/components/ui/TextArea';
@@ -8,7 +8,14 @@ import Keywords from './toolbars/Keywords';
 import { EditingToolbar } from './toolbars/EditingToolbar';
 
 export default function WordCounter() {
-  const [text, setText] = useState(localStorage.getItem('text') || '');
+  const [text, setText] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && localStorage) {
+      setText(localStorage.getItem('text') || '');
+    }
+  }, []);
+
   return (
     <main className='flex items-center justify-center h-full-screen'>
       <div className='flex h-120 w-8/12'>
