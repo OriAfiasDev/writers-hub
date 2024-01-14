@@ -26,13 +26,13 @@ export function EditingToolbar({ text, setText }: Props) {
       <IconButton icon={<CiUndo />} title='Undo' onClick={onUndo} />
       <IconButton icon={<IoSaveOutline />} title='Save' onClick={onSave} />
 
-      <hr className='divider' />
+      <hr className='divider-vertical' />
 
       <IconButton icon={<FaBold />} title='Bold' onClick={onBold} />
       <IconButton disabled icon={<MdAutoFixHigh />} title='Fix' />
       <IconButton disabled icon={<MdOutlineSummarize />} title='Summarize' />
 
-      <hr className='divider' />
+      <hr className='divider-vertical' />
       <IconButton disabled icon={<RiAiGenerate />} title='Repurpose' />
       <IconButton disabled icon={<MdAutoFixHigh />} title='Fix' />
     </div>

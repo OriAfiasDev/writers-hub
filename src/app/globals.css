@@ -30,8 +30,16 @@
   @apply text-slate-500 dark:text-slate-400;
 }
 
+.divider-base {
+  @apply border-t-0 bg-transparent bg-gradient-to-b from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 shrink-0;
+}
+
 .divider {
-  @apply w-full my-4 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100;
+  @apply h-px w-full my-4 divider-base;
+}
+
+.divider-vertical {
+  @apply h-full w-px mx-4 divider-base;
 }
 
 .row {
@@ -39,11 +47,12 @@
 }
 
 .card {
-  @apply flex flex-col items-center rounded-lg bg-primary shadow-lg p-6;
+  @apply flex items-center rounded-lg bg-primary shadow-lg p-3 lg:p-6;
+  /* @apply flex flex-col items-center rounded-lg bg-primary shadow-lg p-6; */
 }
 
 .h-full-screen {
-  height: calc(100dvh - 64px);
+  height: calc(100vh - 64px);
 }
 
 .tooltip {
