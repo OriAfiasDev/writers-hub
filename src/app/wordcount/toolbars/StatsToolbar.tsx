@@ -15,7 +15,7 @@ export default function StatsToolbar({ text }: Props) {
   const pageCount = (text.length / CHARS_PER_PAGE).toFixed(2);
 
   return (
-    <div className='flex items-center justify-between w-full'>
+    <div className='flex items-center justify-between w-full h-20 overflow-y-hidden overflow-x-auto'>
       <Stat title='words' value={wordCount} />
       <Stat title='characters' value={charCount} />
       <Stat title='chars' subtitle='withspace' value={charWithSpaceCount} />

@@ -6,12 +6,12 @@ interface Props {
 
 export default function Stat({ title, subtitle, value }: Props) {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col mr-2'>
       <p className='text-sm text-secondary capitalize pb-2'>
         {title}
         {subtitle && <span className='text-xs lowercase'>&nbsp;({subtitle})</span>}
       </p>
-      <h2 className='text-3xl text-primary font-bold'>{value}</h2>
+      <h2 className='text-sm lg:text-3xl text-primary font-bold'>{value}</h2>
     </div>
   );
 }
